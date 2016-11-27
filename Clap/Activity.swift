@@ -13,7 +13,10 @@ import Gloss
 
 enum ActivityType:String {
     case transport
-    
+    case restaurant
+    case hotel
+    case entertainment
+    case embarkment
 }
 
 struct Activity: Decodable {
