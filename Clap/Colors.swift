@@ -2,7 +2,7 @@
 //  Colors.swift
 //  Spenders
 //
-//  Created by Matthieu Labarrière on 18/09/2016.
+//  Created by Matthieu Labarrière on 26/11/2016.
 //  Copyright © 2016 mlabarriere. All rights reserved.
 //
 

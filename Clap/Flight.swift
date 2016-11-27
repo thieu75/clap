@@ -46,11 +46,26 @@ struct Flight: Decodable {
         self.flightNumber = "flightNumber" <~~ json
         self.arrivalAirport = "arrivalAirport" <~~ json
         self.arrivalTown = "arrivalTown" <~~ json
-        self.arrivalTime = dateFormatter.date(from: ("arrivalTime" <~~ json)!)
+        
+        let arrivalTimeString:String? = "arrivalTime" <~~ json
+        if let arrivalTimeString = arrivalTimeString {
+            self.arrivalTime = dateFormatter.date(from: arrivalTimeString)
+        } else {
+            self.arrivalTime = nil
+        }
+
         self.company = "company" <~~ json
         self.departureAirport = "departureAirport" <~~ json
         self.departureTown = "departureTown" <~~ json
-        self.departureTime = dateFormatter.date(from: ("departureTime" <~~ json)!)
+        
+        
+        let departureTimeString:String? = "departureTime" <~~ json
+        if let departureTimeString = departureTimeString {
+            self.departureTime = dateFormatter.date(from: departureTimeString)
+        } else {
+            self.departureTime = nil
+        }
+        
         self.flightDuration = "flightDuration" <~~ json
         if let statusGrabbed:String = "status" <~~ json {
             self.status = FlightStatus(rawValue: statusGrabbed)

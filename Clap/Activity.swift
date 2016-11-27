@@ -36,10 +36,21 @@ struct Activity: Decodable {
         self.city = "city" <~~ json
         self.description = "description" <~~ json
         self.duration = "duration" <~~ json
-        self.end = dateFormatter.date(from: ("end" <~~ json)!)
+        let endDateString:String? = "end" <~~ json
+        if let endDateString = endDateString {
+            self.end = dateFormatter.date(from: endDateString)
+        } else {
+            self.end = nil
+        }
         self.endLocation = "endLocation" <~~ json
         self.name = "name" <~~ json
-        self.start = dateFormatter.date(from: ("start" <~~ json)!)
+        
+        let startDateString:String? = "start" <~~ json
+        if let startDateString = startDateString {
+            self.start = dateFormatter.date(from: startDateString)
+        } else {
+            self.start = nil
+        }
         self.startLocation = "startLocation" <~~ json
         
         let typeString:String? = "type" <~~ json

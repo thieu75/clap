@@ -12,8 +12,10 @@ import FirebaseDatabase
 import FirebaseAuth
 import Gloss
 
+/// Dataservice allow via sharedInstance to let Controllers access easifly to our backend endpoints.
 class DataService {
     static let dataService = DataService()
+    
     
     private var _BASE_REF = FIRDatabase.database().reference()
     var BASE_REF: FIRDatabaseReference {
@@ -52,8 +54,4 @@ class DataService {
     var PACKAGE_REF:FIRDatabaseReference? {
         return _PACKAGE_REF
     }
-    
-    
-    
-    
 }

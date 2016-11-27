@@ -8,7 +8,8 @@
 
 import Foundation
 
-//MARK: DB Errors
-enum DBErrors:Error {
+//MARK: Errors
+/// To be completed
+enum CLPErrors:Error {
     case SnapshotEmpty
 }

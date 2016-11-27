@@ -32,6 +32,31 @@ class CLPProposalTableViewCell: UITableViewCell {
     
     func configure(package:Package) {
         self.package = package
+        let freetimeValue = package.totalFreeTime.convertDoubleToFormatedhours() ?? ""
+        freetimeLabel.text = ("Temps disponible : "+freetimeValue).uppercased()
+        freetimeTitle.text = package.title
+        activityImage.image = UIImage(named: package.image)
+        
+        status.text = (package.flights?.first?.status).map { $0.rawValue }
+        originReadableLabel.text = package.flights?.first?.departureTown
+        destinationReadableLabel.text = package.flights?.last?.arrivalTown
+        
+        originAirportAbreviation.text = package.flights?.first?.departureAirport
+        destinationAirportAbreviation.text = package.flights?.last?.arrivalAirport
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale.current
+        
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        if let departuretime = package.flights?.first?.departureTime {
+            let convertedDate = dateFormatter.string(from: departuretime)
+            originTime.text = convertedDate
+        }
+        
+        if let arrivaltime = package.flights?.last?.arrivalTime {
+            let convertedDate = dateFormatter.string(from: arrivaltime)
+            destinationTime.text = convertedDate
+        }
         
     }
 
@@ -41,4 +66,13 @@ class CLPProposalTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+}
+
+extension Double {
+    func convertDoubleToFormatedhours() -> String? {
+        let componentFormatter = DateComponentsFormatter()
+        componentFormatter.unitsStyle = .positional
+        componentFormatter.zeroFormattingBehavior = .dropAll
+        return componentFormatter.string(from: self)
+    }
 }

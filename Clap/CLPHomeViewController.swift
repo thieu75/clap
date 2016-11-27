@@ -15,6 +15,7 @@ class CLPHomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableViewHeightConstrain: NSLayoutConstraint!
     
+    /// didSet used to grow the tableview when the datasource has been updated
     var flights:[Flight]? {
         didSet {
             if let flights = flights, flights.count > 0 {
@@ -34,6 +35,7 @@ class CLPHomeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        /// flights emptied on view will appear to ensure last version is used
         flights = [Flight]()
         Flight.getOriginalFlights { (flight) in
             if let flight = flight {
@@ -47,22 +49,10 @@ class CLPHomeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 //MARK: Flight list management
+/// Flight list view management
 extension CLPHomeViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
