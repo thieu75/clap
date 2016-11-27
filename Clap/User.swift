@@ -15,7 +15,6 @@ struct User: Decodable {
     var key:String!
     var name:String!
     var surname:String!
-    var cabinCode:String!
     var gender:String!
     var regime:String?
 

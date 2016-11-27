@@ -33,7 +33,7 @@ class CLPHomeViewController: UIViewController {
         tableView.register(cellNib, forCellReuseIdentifier: "CLPFlightTableViewCell")
     }
     
-    override func viewWillAppear(_ animated: Bool) {        
+    override func viewWillAppear(_ animated: Bool) {
         flights = [Flight]()
         Flight.getOriginalFlights { (flight) in
             if let flight = flight {
@@ -62,6 +62,7 @@ class CLPHomeViewController: UIViewController {
 
 }
 
+//MARK: Flight list management
 extension CLPHomeViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

@@ -47,14 +47,14 @@
                         <rect key="frame" x="0.0" y="66" width="320" height="30"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="warning" translatesAutoresizingMaskIntoConstraints="NO" id="12N-Dv-WZ3">
-                                <rect key="frame" x="8" y="3" width="24" height="24"/>
+                                <rect key="frame" x="8" y="3" width="20" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="24" id="Mjc-5R-s11"/>
-                                    <constraint firstAttribute="height" constant="24" id="ti9-av-4r3"/>
+                                    <constraint firstAttribute="width" constant="20" id="Mjc-5R-s11"/>
+                                    <constraint firstAttribute="height" constant="20" id="ti9-av-4r3"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wD9-7t-2NG">
-                                <rect key="frame" x="40" y="5" width="272" height="21"/>
+                                <rect key="frame" x="36" y="5" width="276" height="21"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -109,6 +109,7 @@
                     <constraint firstAttribute="trailing" secondItem="u0J-kY-aY6" secondAttribute="trailing" id="WI2-to-Z64"/>
                     <constraint firstItem="pM5-hq-rYJ" firstAttribute="trailing" secondItem="Gib-hO-4lb" secondAttribute="trailing" id="cAO-67-sVP"/>
                     <constraint firstItem="u0J-kY-aY6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="gfK-x2-Evs"/>
+                    <constraint firstItem="pM5-hq-rYJ" firstAttribute="top" secondItem="Gib-hO-4lb" secondAttribute="bottom" constant="-2" id="hvf-5z-VMX"/>
                     <constraint firstItem="kFz-Fx-esY" firstAttribute="leading" secondItem="8BV-op-7hl" secondAttribute="leading" id="irY-N7-HbA"/>
                     <constraint firstItem="Jv0-LV-fnJ" firstAttribute="top" secondItem="5ax-Nx-8M5" secondAttribute="bottom" constant="8" id="ivM-Zo-aPP"/>
                     <constraint firstItem="8BV-op-7hl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="mH2-v1-6Rh"/>
@@ -117,6 +118,7 @@
                     <constraint firstItem="pM5-hq-rYJ" firstAttribute="baseline" secondItem="Gib-hO-4lb" secondAttribute="baseline" constant="20" id="sxK-40-uEA"/>
                     <constraint firstItem="5ax-Nx-8M5" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="t4c-Xt-OWb"/>
                     <constraint firstItem="Jv0-LV-fnJ" firstAttribute="centerX" secondItem="5ax-Nx-8M5" secondAttribute="centerX" id="t7y-l8-CYn"/>
+                    <constraint firstItem="kFz-Fx-esY" firstAttribute="top" secondItem="8BV-op-7hl" secondAttribute="bottom" constant="-2" id="yJY-ec-jon"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

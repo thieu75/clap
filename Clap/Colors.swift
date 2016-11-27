@@ -24,7 +24,7 @@ extension UIColor {
     enum Name : UInt32 {
         case blueAF = 0x192C42FF
         case redAF    = 0xD60907FF
-        case grey          = 0xD8D8D8FF
+        case orangeAF          = 0xFF732FFF
         case greyF4        = 0xF4F4F4FF
         case greyBold      = 0x8F8E94FF
         case grey4A        = 0x4A4A4AFF

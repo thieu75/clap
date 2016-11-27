@@ -36,16 +36,29 @@ class CLPFlightTableViewCell: UITableViewCell {
 
     func manageWarningSpace() {
         switch flight.status! {
-        case .canceled:
+        case .cancelled:
             warningContainer.backgroundColor = UIColor(named: .redAF)
-        case .retarded:
+            status.textColor = UIColor(named: .redAF)
+        case .delayed:
+            warningContainer.backgroundColor = UIColor(named: .orangeAF)
+            status.textColor = UIColor(named: .orangeAF)
+        case .ontime:
             warningContainer.backgroundColor = UIColor(named: .blueAF)
+            status.textColor = UIColor(named: .blueAF)
         }
-        warningExplanation.tintColor = UIColor.white
+        warningPicto.tintColor = UIColor.white
         lastMessage.textColor = UIColor.white
     }
     
     func manageFlightLabels() {
+        lastMessage.text = flight.lastMessage
+        status.text = flight.status.rawValue
         
+        originReadableLabel.text = flight.departureTown
+        originAirportAbreviation.text = flight.departureAirport
+        destinationReadableLabel.text = flight.arrivalTown
+        destinationAirportAbreviation.text = flight.arrivalAirport
+        //originTime.text =
+        //destinationTime.text =
     }
 }

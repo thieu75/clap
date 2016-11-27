@@ -22,7 +22,7 @@ class CLPProposalTableViewCell: UITableViewCell {
     @IBOutlet weak var destinationTime: UILabel!
     
     
-    
+    var package:Package!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,7 +30,8 @@ class CLPProposalTableViewCell: UITableViewCell {
     }
     
     
-    func configure() {
+    func configure(package:Package) {
+        self.package = package
         
     }
 

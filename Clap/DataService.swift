@@ -48,5 +48,12 @@ class DataService {
         return _ORIGINAL_FLIGHT_REF
     }
     
+    private var _PACKAGE_REF = FIRDatabase.database().reference().child("booking").child("packages")
+    var PACKAGE_REF:FIRDatabaseReference? {
+        return _PACKAGE_REF
+    }
+    
+    
+    
     
 }

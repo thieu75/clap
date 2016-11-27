@@ -10,24 +10,33 @@ import Foundation
 import FirebaseDatabase
 import Gloss
 
-enum FlightStatus:Int {
-    case canceled = 0
-    case retarded = 1
+enum FlightStatus:String {
+    case cancelled
+    case delayed
+    case ontime
 }
 
 struct Flight: Decodable {
     var key:String!
     var flightNumber:String!
+
     var arrivalAirport:String!
     var arrivalTime:Date!
-    var company:String!
+    var arrivalTown:String!
+
     var departureAirport:String!
     var departureTime:Date!
+    var departureTown:String!
+
+    var company:String!
     var flightDuration:TimeInterval!
     var status:FlightStatus!
     var visibility:Bool!
-    
-    
+    var duration:TimeInterval!
+    var order:Int!
+    var lastMessage:String!
+    var terminalDeparture:String!
+
     
     init?(json: JSON) {
         
@@ -36,16 +45,22 @@ struct Flight: Decodable {
         
         self.flightNumber = "flightNumber" <~~ json
         self.arrivalAirport = "arrivalAirport" <~~ json
-        self.arrivalTime = dateFormatter.date(from: "2015-06-26T00:10:00+01:00")
+        self.arrivalTown = "arrivalTown" <~~ json
+        self.arrivalTime = dateFormatter.date(from: ("arrivalTime" <~~ json)!)
         self.company = "company" <~~ json
         self.departureAirport = "departureAirport" <~~ json
+        self.departureTown = "departureTown" <~~ json
         self.departureTime = dateFormatter.date(from: ("departureTime" <~~ json)!)
         self.flightDuration = "flightDuration" <~~ json
-        if let statusGrabbed:Int = "status" <~~ json {
+        if let statusGrabbed:String = "status" <~~ json {
             self.status = FlightStatus(rawValue: statusGrabbed)
         } else {
-            self.status = FlightStatus.retarded
+            self.status = FlightStatus.delayed
         }
+        self.visibility = "visibility" <~~ json
+        self.order = "order" <~~ json
+        self.terminalDeparture = "terminalDeparture" <~~ json
+        self.duration = "duration" <~~ json
     }
     
     init?(snapshot:FIRDataSnapshot) {

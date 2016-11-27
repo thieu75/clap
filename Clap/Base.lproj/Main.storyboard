@@ -40,7 +40,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cOS-On-vzN">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cOS-On-vzN">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="214"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -141,7 +141,7 @@
                     </view>
                     <connections>
                         <outlet property="headerTitle" destination="MrY-sM-z6T" id="6Ld-np-xVU"/>
-                        <outlet property="tableView" destination="0zP-f5-UbN" id="FID-Dx-gBt"/>
+                        <outlet property="tableView" destination="0zP-f5-UbN" id="aTa-eg-yoz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yOL-cg-vfE" userLabel="First Responder" sceneMemberID="firstResponder"/>
