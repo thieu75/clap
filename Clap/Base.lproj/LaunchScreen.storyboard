@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="o26-cK-WCH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,7 +22,27 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Islande" translatesAutoresizingMaskIntoConstraints="NO" id="qmH-0J-dy0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Banniere" translatesAutoresizingMaskIntoConstraints="NO" id="EwX-Wr-6eb">
+                                <rect key="frame" x="67" y="100" width="240" height="77"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EwX-Wr-6eb" secondAttribute="height" multiplier="240:77" id="Bd0-cL-Gqi"/>
+                                    <constraint firstAttribute="width" constant="240" id="TT1-ru-aoE"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="qmH-0J-dy0" secondAttribute="trailing" id="1SY-DP-zUt"/>
+                            <constraint firstItem="EwX-Wr-6eb" firstAttribute="centerX" secondItem="qmH-0J-dy0" secondAttribute="centerX" id="9hx-uo-48a"/>
+                            <constraint firstAttribute="topMargin" secondItem="qmH-0J-dy0" secondAttribute="top" id="C9u-IK-wZu"/>
+                            <constraint firstItem="EwX-Wr-6eb" firstAttribute="top" secondItem="qmH-0J-dy0" secondAttribute="top" constant="100" id="bw7-W5-nJW"/>
+                            <constraint firstItem="qmH-0J-dy0" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="f4J-78-KDN"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="qmH-0J-dy0" secondAttribute="bottom" id="fNh-ry-GRC"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ywi-fp-Tao"/>
                 </viewController>
@@ -28,23 +50,9 @@
             </objects>
             <point key="canvasLocation" x="1020" y="149.77511244377811"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Xtg-Wt-VYA">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o26-cK-WCH" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iwM-Y3-0Qo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="01J-lp-oVM" kind="relationship" relationship="rootViewController" id="Jh7-7M-ncY"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NkU-Zr-Yis" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="80.799999999999997" y="149.77511244377811"/>
-        </scene>
     </scenes>
+    <resources>
+        <image name="Banniere" width="960" height="300"/>
+        <image name="Islande" width="1713" height="1109"/>
+    </resources>
 </document>

@@ -57,7 +57,7 @@ struct Flight: Decodable {
         self.company = "company" <~~ json
         self.departureAirport = "departureAirport" <~~ json
         self.departureTown = "departureTown" <~~ json
-        
+        self.lastMessage = "lastMessage" <~~ json
         
         let departureTimeString:String? = "departureTime" <~~ json
         if let departureTimeString = departureTimeString {

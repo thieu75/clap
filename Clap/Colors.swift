@@ -25,7 +25,7 @@ extension UIColor {
         case blueAF = 0x192C42FF
         case redAF    = 0xD60907FF
         case orangeAF          = 0xFF732FFF
-        case greyF4        = 0xF4F4F4FF
+        case greyF2        = 0xF2F2F2FF
         case greyBold      = 0x8F8E94FF
         case grey4A        = 0x4A4A4AFF
         case grey1A        = 0x1A1A1AFF

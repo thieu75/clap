@@ -58,7 +58,13 @@ class CLPFlightTableViewCell: UITableViewCell {
         originAirportAbreviation.text = flight.departureAirport
         destinationReadableLabel.text = flight.arrivalTown
         destinationAirportAbreviation.text = flight.arrivalAirport
-        //originTime.text =
-        //destinationTime.text =
+        
+        if let departuretime = flight.departureTime {
+            originTime.text = departuretime.convertToDateAndTime()
+        }
+        
+        if let arrivaltime = flight.arrivalTime {
+            destinationTime.text = arrivaltime.convertToDateAndTime()
+        }
     }
 }

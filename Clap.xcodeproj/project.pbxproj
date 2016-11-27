@@ -13,6 +13,7 @@
 		080FE3721DEABE0C0071D132 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080FE3711DEABE0C0071D132 /* User.swift */; };
 		080FE3741DEABE330071D132 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080FE3731DEABE330071D132 /* Activity.swift */; };
 		080FE3761DEABE400071D132 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080FE3751DEABE400071D132 /* Package.swift */; };
+		0810AC9D1DEAFA9800728068 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0810AC9C1DEAFA9800728068 /* Extensions.swift */; };
 		085A3C2D1DE9E1CA00C2207A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 085A3C2C1DE9E1CA00C2207A /* GoogleService-Info.plist */; };
 		085A3C311DE9E76900C2207A /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085A3C301DE9E76900C2207A /* Flight.swift */; };
 		085A3C421DE9EEFB00C2207A /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085A3C411DE9EEFB00C2207A /* DataService.swift */; };
@@ -28,6 +29,9 @@
 		085ED5321DE9D85D00EDB956 /* ClapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085ED5311DE9D85D00EDB956 /* ClapUITests.swift */; };
 		08C6339D1DEA4A5D00412F39 /* CLPFlightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C6339B1DEA4A5D00412F39 /* CLPFlightTableViewCell.swift */; };
 		08C6339E1DEA4A5D00412F39 /* CLPFlightTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08C6339C1DEA4A5D00412F39 /* CLPFlightTableViewCell.xib */; };
+		08E8399F1DEB128D0090DFA0 /* CLPTimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E8399D1DEB128D0090DFA0 /* CLPTimelineTableViewCell.swift */; };
+		08E839A01DEB128D0090DFA0 /* CLPTimelineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08E8399E1DEB128D0090DFA0 /* CLPTimelineTableViewCell.xib */; };
+		08E839A21DEB14080090DFA0 /* CLPTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E839A11DEB14080090DFA0 /* CLPTimelineViewController.swift */; };
 		4EC793EEA31472E426170ECB /* Pods_ClapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1B8250BCA3268F6D18E933 /* Pods_ClapUITests.framework */; };
 		8725E41305758AED0A1CA51C /* Pods_Clap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E0E6483AF0920C3180CF08D /* Pods_Clap.framework */; };
 		BF1158E437522C635C44C595 /* Pods_ClapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E184B739B324D0F2C9C988ED /* Pods_ClapTests.framework */; };
@@ -57,6 +61,7 @@
 		080FE3711DEABE0C0071D132 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		080FE3731DEABE330071D132 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		080FE3751DEABE400071D132 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		0810AC9C1DEAFA9800728068 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		085A3C2C1DE9E1CA00C2207A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		085A3C301DE9E76900C2207A /* Flight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
 		085A3C411DE9EEFB00C2207A /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
@@ -78,6 +83,9 @@
 		085ED5331DE9D85D00EDB956 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08C6339B1DEA4A5D00412F39 /* CLPFlightTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLPFlightTableViewCell.swift; sourceTree = "<group>"; };
 		08C6339C1DEA4A5D00412F39 /* CLPFlightTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CLPFlightTableViewCell.xib; sourceTree = "<group>"; };
+		08E8399D1DEB128D0090DFA0 /* CLPTimelineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLPTimelineTableViewCell.swift; sourceTree = "<group>"; };
+		08E8399E1DEB128D0090DFA0 /* CLPTimelineTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CLPTimelineTableViewCell.xib; sourceTree = "<group>"; };
+		08E839A11DEB14080090DFA0 /* CLPTimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLPTimelineViewController.swift; sourceTree = "<group>"; };
 		0DDCB41AB8A3495D99386A14 /* Pods-Clap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Clap/Pods-Clap.debug.xcconfig"; sourceTree = "<group>"; };
 		1E0E6483AF0920C3180CF08D /* Pods_Clap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F20F7A69C553B19C16A0E91 /* Pods-Clap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clap.release.xcconfig"; path = "Pods/Target Support Files/Pods-Clap/Pods-Clap.release.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +132,7 @@
 				085A3C471DEA410C00C2207A /* Colors.swift */,
 				085A3C431DE9EFCD00C2207A /* UIView+Extension.swift */,
 				085A3C451DE9FD5700C2207A /* Errors.swift */,
+				0810AC9C1DEAFA9800728068 /* Extensions.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -133,6 +142,7 @@
 			children = (
 				085A3C491DEA455100C2207A /* CLPHomeViewController.swift */,
 				080FE36F1DEAA9BD0071D132 /* CLPProposalViewController.swift */,
+				08E839A11DEB14080090DFA0 /* CLPTimelineViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -212,6 +222,8 @@
 				08C6339C1DEA4A5D00412F39 /* CLPFlightTableViewCell.xib */,
 				080FE36B1DEAA9960071D132 /* CLPProposalTableViewCell.swift */,
 				080FE36C1DEAA9960071D132 /* CLPProposalTableViewCell.xib */,
+				08E8399D1DEB128D0090DFA0 /* CLPTimelineTableViewCell.swift */,
+				08E8399E1DEB128D0090DFA0 /* CLPTimelineTableViewCell.xib */,
 			);
 			name = TableViewCell;
 			sourceTree = "<group>";
@@ -362,6 +374,7 @@
 				085A3C2D1DE9E1CA00C2207A /* GoogleService-Info.plist in Resources */,
 				080FE36E1DEAA9960071D132 /* CLPProposalTableViewCell.xib in Resources */,
 				085ED5171DE9D85D00EDB956 /* Main.storyboard in Resources */,
+				08E839A01DEB128D0090DFA0 /* CLPTimelineTableViewCell.xib in Resources */,
 				08C6339E1DEA4A5D00412F39 /* CLPFlightTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,9 +533,12 @@
 				085A3C4A1DEA455100C2207A /* CLPHomeViewController.swift in Sources */,
 				080FE36D1DEAA9960071D132 /* CLPProposalTableViewCell.swift in Sources */,
 				085A3C461DE9FD5700C2207A /* Errors.swift in Sources */,
+				08E8399F1DEB128D0090DFA0 /* CLPTimelineTableViewCell.swift in Sources */,
 				085A3C421DE9EEFB00C2207A /* DataService.swift in Sources */,
 				080FE3721DEABE0C0071D132 /* User.swift in Sources */,
 				080FE3761DEABE400071D132 /* Package.swift in Sources */,
+				0810AC9D1DEAFA9800728068 /* Extensions.swift in Sources */,
+				08E839A21DEB14080090DFA0 /* CLPTimelineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

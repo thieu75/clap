@@ -32,6 +32,8 @@ class CLPHomeViewController: UIViewController {
         //Register Cell for tableview
         let cellNib = UINib(nibName: "CLPFlightTableViewCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: "CLPFlightTableViewCell")
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "Logo-Barre-Header"), for: .default)
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -44,35 +44,13 @@ class CLPProposalTableViewCell: UITableViewCell {
         originAirportAbreviation.text = package.flights?.first?.departureAirport
         destinationAirportAbreviation.text = package.flights?.last?.arrivalAirport
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale.current
-        
-        dateFormatter.dateStyle = DateFormatter.Style.short
         if let departuretime = package.flights?.first?.departureTime {
-            let convertedDate = dateFormatter.string(from: departuretime)
-            originTime.text = convertedDate
+            originTime.text = departuretime.convertToDateAndTime()
         }
         
         if let arrivaltime = package.flights?.last?.arrivalTime {
-            let convertedDate = dateFormatter.string(from: arrivaltime)
-            destinationTime.text = convertedDate
+            destinationTime.text = arrivaltime.convertToDateAndTime()
         }
         
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
-}
-
-extension Double {
-    func convertDoubleToFormatedhours() -> String? {
-        let componentFormatter = DateComponentsFormatter()
-        componentFormatter.unitsStyle = .positional
-        componentFormatter.zeroFormattingBehavior = .dropAll
-        return componentFormatter.string(from: self)
     }
 }

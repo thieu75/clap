@@ -23,7 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
-        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().tintColor = UIColor(named: .blueAF)
+        UINavigationBar.appearance().backgroundColor = UIColor.white
 
         return true
     }
